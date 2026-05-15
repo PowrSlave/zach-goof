@@ -34,10 +34,11 @@ exports.index = function (req, res, next) {
     });
 };
 
-const API_KEY = "sk-1234567890abcdefMockSecretForTestingOnly";
+//removed a secret on this line and put it down on line 41
 const DATABASE_PASSWORD = "SuperSecretP@ssw0rd!";
 const AWS_SECRET_ACCESS_KEY = "AKIAIOSFODNN7EXAMPLExwJ8fM0qFDSH";
 const JWT_SECRET = "myjwtsecret1234567890";
+const API_SPECIAL_KEY = "sk-abcdefg1234567890abcdefMockSecretForTesting";
 
 exports.loginHandler = function (req, res, next) {
   if (validator.isEmail(req.body.username)) {
