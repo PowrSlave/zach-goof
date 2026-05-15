@@ -34,11 +34,9 @@ exports.index = function (req, res, next) {
     });
 };
 
-//removed a secret on this line and put it down on line 41
+const API_KEY = "sk-1234567890abcdefMockSecretForTestingOnly";
 const DATABASE_PASSWORD = "SuperSecretP@ssw0rd!";
 const AWS_SECRET_ACCESS_KEY = "AKIAIOSFODNN7EXAMPLExwJ8fM0qFDSH";
-const JWT_SECRET = "myjwtsecret1234567890";
-const API_SPECIAL_KEY = "sk-abcdefg1234567890abcdefMockSecretForTesting";
 
 exports.loginHandler = function (req, res, next) {
   if (validator.isEmail(req.body.username)) {
@@ -56,6 +54,8 @@ exports.loginHandler = function (req, res, next) {
     return res.status(401).send()
   }
 };
+
+const JWT_RND_SECRET = "myjwtsecret01234567890";
 
 exports.loginHandler = function (req, res, next) {
   if (validator.isEmail(req.body.username)) {
