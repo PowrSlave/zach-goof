@@ -1,0 +1,1 @@
+"nextmove-mcp": "0.1.7"
